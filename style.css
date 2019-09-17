@@ -1,0 +1,133 @@
+body{
+    margin: 0rem 17rem;
+    font-family: Arial;
+    height: 60%;
+    position: relative; 
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    grid-auto-rows: 30px;
+}
+
+  header,main{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: yellow;
+    padding: 8%;
+}
+
+nav{
+    font-size: 20px;
+    color: black;
+    display: flex;
+    text-align: center;
+    margin: 0px;
+    height:20%;
+    justify-content: space-around;
+    background-color: yellow;
+    padding: 5%;
+}
+
+main{
+    justify-content: flex-start;
+}
+
+.tintin {
+    display: grid;
+    height: 20%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 0.5rem;
+    grid-auto-rows: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h3 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin:0;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    line-height: 1.6;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+footer { 
+    height: 10%;
+    background-color: yellow;
+    margin: 0px;
+    padding: 5%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute; 
+    left: 0; right: 0; bottom: 0; 
+    height:[footer-height];
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header  { grid-column: span 6; grid-row: span 2;}
+nav     { grid-column: span 6; grid-row: span 2;}
+main    { grid-column: span 6; grid-row: span 25;}
+footer  { grid-column: span 6; grid-row: span 2;}
+
+
+@media only screen and (min-device-width: 1224px){
+    nav{
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .wrapper{
+        grid-gap: 1rem;
+    }
+
+    .show {
+        bottom: 100px;
+        opacity: 1;
+    }
+    
+    header{
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 8%;
+    }
+
+    header i.material-icons{
+        display: none;
+    }
+
+    header  { grid-column: span 6; grid-row: span 3; }
+    nav     { grid-column: span 6; grid-row: span 2; }
+    main    { grid-column: span 5; grid-row: span 20; }
+}
